@@ -1,0 +1,38 @@
+diff --git a/src/ImageSharp/Formats/Gif/LzwDecoder.cs b/src/ImageSharp/Formats/Gif/LzwDecoder.cs
+index 9eaa55566..a0e397c92 100644
+--- a/src/ImageSharp/Formats/Gif/LzwDecoder.cs
++++ b/src/ImageSharp/Formats/Gif/LzwDecoder.cs
+@@ -13,7 +13,7 @@ namespace SixLabors.ImageSharp.Formats.Gif
+     /// <summary>
+     /// Decompresses and decodes data using the dynamic LZW algorithms.
+     /// </summary>
+-    internal sealed class LzwDecoder : IDisposable
++    public sealed class LzwDecoder : IDisposable
+     {
+         /// <summary>
+         /// The max decoder pixel stack size.
+diff --git a/src/ImageSharp/Formats/Gif/LzwEncoder.cs b/src/ImageSharp/Formats/Gif/LzwEncoder.cs
+index 195a84a1d..c20d0a7c7 100644
+--- a/src/ImageSharp/Formats/Gif/LzwEncoder.cs
++++ b/src/ImageSharp/Formats/Gif/LzwEncoder.cs
+@@ -34,7 +34,7 @@ namespace SixLabors.ImageSharp.Formats.Gif
+     ///              Joe Orost              (decvax!vax135!petsd!joe)
+     /// </para>
+     /// </remarks>
+-    internal sealed class LzwEncoder : IDisposable
++    public sealed class LzwEncoder : IDisposable
+     {
+         /// <summary>
+         /// 80% occupancy
+diff --git a/src/ImageSharp/IO/BufferedReadStream.cs b/src/ImageSharp/IO/BufferedReadStream.cs
+index acba3eff0..0c0b2ad91 100644
+--- a/src/ImageSharp/IO/BufferedReadStream.cs
++++ b/src/ImageSharp/IO/BufferedReadStream.cs
+@@ -12,7 +12,7 @@ namespace SixLabors.ImageSharp.IO
+     /// A readonly stream that add a secondary level buffer in addition to native stream
+     /// buffered reading to reduce the overhead of small incremental reads.
+     /// </summary>
+-    internal sealed class BufferedReadStream : Stream
++    public sealed class BufferedReadStream : Stream
+     {
+         private readonly int maxBufferIndex;
